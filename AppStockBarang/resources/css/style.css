@@ -1,0 +1,140 @@
+/* Palet Warna Dasar */
+.root {
+    -fx-base: #f4f4f4;
+    background: transparent; 
+    -fx-background: #ffffff; 
+    -fx-primary-color: #007bff; 
+    -fx-secondary-color: #6c757d;
+    -fx-success-color: #28a745; 
+    -fx-error-color: #dc3545;
+    border-color: transparent; 
+    -fx-border-color: #ced4da; 
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+
+.vbox {
+    -fx-background-color: -fx-background;
+    -fx-padding: 20;
+    -fx-spacing: 15; 
+}
+
+
+.hbox {
+    -fx-spacing: 10;
+    -fx-alignment: CENTER_LEFT;
+}
+
+
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #343a40;
+}
+
+.label-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-primary-color;
+    -fx-padding: 0 0 10 0;
+}
+
+
+.vbox > .label:first-child {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #343a40;
+    -fx-padding: 0 0 10 0;
+}
+
+
+#lblStatus {
+    -fx-text-fill: -fx-error-color;
+    -fx-font-weight: bold;
+    -fx-font-style: italic;
+    -fx-font-size: 13px;
+}
+
+
+.text-field, .password-field {
+    -fx-pref-height: 35px;
+    -fx-background-color: #ffffff;
+    -fx-border-color: -fx-border-color;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 0 10 0 10;
+    -fx-font-size: 13px;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: -fx-primary-color;
+    -fx-effect: dropshadow(two-pass-box, rgba(0, 123, 255, 0.4), 5, 0.0, 0, 0);
+}
+
+
+.hbox .text-field {
+    -fx-pref-width: 150px; 
+}
+
+
+.button {
+    -fx-background-color: -fx-primary-color;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 20 8 20;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 3, 0.0, 0, 1);
+}
+
+.button:hover {
+    -fx-background-color: #0056b3; 
+}
+
+.button:pressed {
+    -fx-translate-y: 1px;
+    -fx-effect: none;
+}
+
+
+.vbox.menu-vbox > .button {
+    -fx-pref-width: 200px; 
+    -fx-alignment: CENTER;
+}
+
+
+.hbox > .button:nth-child(2) { 
+    -fx-background-color: -fx-error-color;
+}
+
+.hbox > .button:nth-child(2):hover {
+    -fx-background-color: #c82333;
+}
+
+
+.table-view {
+    -fx-base: #f8f9fa;
+    -fx-control-inner-background: #ffffff;
+    -fx-border-color: -fx-border-color;
+    -fx-border-width: 1;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+
+
+.table-view .column-header-background {
+    -fx-background-color: -fx-primary-color;
+    -fx-padding: 5 0 5 0;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: transparent;
+}
+
+.table-view .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+

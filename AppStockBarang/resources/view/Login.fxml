@@ -5,9 +5,12 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
-
+<?import java.lang.String?>
 
 <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" spacing="10.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gudang.controller.LoginController">
+   <stylesheets>
+      <String fx:value="/css/style.css" />
+    </stylesheets>
    <children>
       <Label text="Login Aplikasi Gudang" />
       <TextField fx:id="txtUser" promptText="Username" />
