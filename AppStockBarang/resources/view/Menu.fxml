@@ -4,11 +4,11 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
 
-
 <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" spacing="10.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gudang.controller.MenuController">
    <children>
       <Label text="Menu Utama" />
       <Button mnemonicParsing="false" onAction="#openBarang" text="Manajemen Barang" />
       <Button mnemonicParsing="false" onAction="#openSupplier" text="Manajemen Supplier" />
+      <Button mnemonicParsing="false" onAction="#openCustomer" text="Manajemen Customer" />
    </children>
 </VBox>
