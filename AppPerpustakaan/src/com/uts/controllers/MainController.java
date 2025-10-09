@@ -6,12 +6,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class MenuController {
+public class MainController {
 
     @FXML
-    private void openBuku() throws Exception {
+    private void openBooks() throws Exception {
         Stage stage = (Stage) new Stage();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Buku.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Books.fxml"));
         Scene scene = new Scene(loader.load());
         stage.setScene(scene);
         stage.setTitle("Manajemen Buku");
@@ -19,9 +19,9 @@ public class MenuController {
     }
 
     @FXML
-    private void openAnggota() throws Exception {
+    private void openMembers() throws Exception {
         Stage stage = (Stage) new Stage();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Anggota.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Members.fxml"));
         Scene scene = new Scene(loader.load());
         stage.setScene(scene);
         stage.setTitle("Manajemen Anggota");
@@ -29,9 +29,9 @@ public class MenuController {
     }
 
     @FXML
-    private void openPeminjaman() throws Exception {
+    private void openTransactions() throws Exception {
         Stage stage = (Stage) new Stage();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Peminjaman.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Transactions.fxml"));
         Scene scene = new Scene(loader.load());
         stage.setScene(scene);
         stage.setTitle("Manajemen Buku");

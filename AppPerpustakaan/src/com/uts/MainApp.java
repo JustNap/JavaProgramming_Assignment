@@ -5,11 +5,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class App extends Application{
+public class MainApp extends Application{
     @Override
     public void start(Stage primaryStage) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Menu.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Main.fxml"));
             Scene scene = new Scene(loader.load());
 
             scene.getStylesheets().add(getClass().getResource("/css/style.css").toExternalForm());
