@@ -71,11 +71,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
-                "id='" + id.get() + '\'' +
-                ", title='" + title.get() + '\'' +
-                ", author='" + author.get() + '\'' +
-                ", year=" + year.get() +
-                '}';
+        String yearDisplay = getYear() > 0 ? " (" + getYear() + ")" : "";
+        return getId() + " — " + getTitle() + yearDisplay;
     }
 }

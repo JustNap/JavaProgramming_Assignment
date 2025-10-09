@@ -68,6 +68,6 @@ public class Member {
 
     @Override
     public String toString() {
-        return String.format("Member [ID=%s, Name=%s, Phone=%s]", id.get(), name.get(), phone.get());
+        return getName() + " (" + getId() + ")";
     }
 }

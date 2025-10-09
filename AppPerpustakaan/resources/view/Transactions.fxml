@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="10.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uts.controllers.TransactionsController">
+   <children>
+      <Label text="Peminjaman Buku" />
+      <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="600.0" spacing="10.0">
+         <children>
+            <ComboBox fx:id="cbMember" prefHeight="25.0" prefWidth="230.0" promptText="Pilih Anggota" />
+            <ComboBox fx:id="cbBook" prefHeight="25.0" prefWidth="283.0" promptText="Pilih Buku" />
+            <Button mnemonicParsing="false" onAction="#onBorrow" text="Pinjam" />
+         </children>
+      </HBox>
+      <TableView fx:id="tableTransactions" prefHeight="319.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="colMember" prefWidth="169.0" text="Nama Anggota" />
+          <TableColumn fx:id="colBook" prefWidth="271.0" text="Judul Buku" />
+            <TableColumn fx:id="colDate" prefWidth="155.0" text="Tanggal Pinjam" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>

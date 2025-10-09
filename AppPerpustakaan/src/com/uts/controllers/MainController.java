@@ -1,18 +1,38 @@
 package com.uts.controllers;
 
-
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.scene.Parent; 
 
 public class MainController {
 
+
+    private BooksController booksControllerInstance;
+    private MembersController membersControllerInstance;
+    private TransactionsController transactionsControllerInstance;
+
+    private Parent booksView;
+    private Parent membersView;
+    private Parent transactionsView;
+
+    public void setAllControllers(
+        BooksController bc, MembersController mc, TransactionsController tc,
+        Parent bv, Parent mv, Parent tv) {
+        
+        this.booksControllerInstance = bc;
+        this.membersControllerInstance = mc;
+        this.transactionsControllerInstance = tc;
+        
+        this.booksView = bv;
+        this.membersView = mv;
+        this.transactionsView = tv;
+    }
+
     @FXML
     private void openBooks() throws Exception {
-        Stage stage = (Stage) new Stage();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Books.fxml"));
-        Scene scene = new Scene(loader.load());
+        Stage stage = new Stage();
+        Scene scene = new Scene(this.booksView); 
         stage.setScene(scene);
         stage.setTitle("Manajemen Buku");
         stage.show();
@@ -20,9 +40,8 @@ public class MainController {
 
     @FXML
     private void openMembers() throws Exception {
-        Stage stage = (Stage) new Stage();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Members.fxml"));
-        Scene scene = new Scene(loader.load());
+        Stage stage = new Stage();
+        Scene scene = new Scene(this.membersView);
         stage.setScene(scene);
         stage.setTitle("Manajemen Anggota");
         stage.show();
@@ -30,11 +49,10 @@ public class MainController {
 
     @FXML
     private void openTransactions() throws Exception {
-        Stage stage = (Stage) new Stage();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Transactions.fxml"));
-        Scene scene = new Scene(loader.load());
+        Stage stage = new Stage();
+        Scene scene = new Scene(this.transactionsView);
         stage.setScene(scene);
-        stage.setTitle("Manajemen Buku");
+        stage.setTitle("Peminjaman Buku");
         stage.show();
     }
 
