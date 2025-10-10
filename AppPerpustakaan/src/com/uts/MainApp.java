@@ -27,7 +27,7 @@ public class MainApp extends Application{
     @Override
     public void start(Stage primaryStage) {
         try {
-            loadAllViewsAndControllers(); // Method ini menginisialisasi mainController
+            loadAllViewsAndControllers();
             
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Main.fxml"));
             
@@ -48,16 +48,16 @@ public class MainApp extends Application{
     private void loadAllViewsAndControllers() throws IOException {
         
         FXMLLoader memberLoader = new FXMLLoader(getClass().getResource("/view/Members.fxml"));
-        membersView = memberLoader.load(); // Simpan View
+        membersView = memberLoader.load(); 
         membersControllerInstance = memberLoader.getController();
 
         FXMLLoader bookLoader = new FXMLLoader(getClass().getResource("/view/Books.fxml"));
-        booksView = bookLoader.load(); // Simpan View
+        booksView = bookLoader.load(); 
         booksControllerInstance = bookLoader.getController();
 
 
         FXMLLoader transLoader = new FXMLLoader(getClass().getResource("/view/Transactions.fxml"));
-        transactionsView = transLoader.load(); // Simpan View
+        transactionsView = transLoader.load();
         transactionsControllerInstance = transLoader.getController();
         
         transactionsControllerInstance.setExternalData(

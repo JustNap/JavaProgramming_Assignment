@@ -7,8 +7,12 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import java.lang.String?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="10.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uts.controllers.BooksController">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="650.0" spacing="10.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uts.controllers.BooksController">
+   <stylesheets>
+      <String fx:value="/css/style.css" />
+   </stylesheets>
    <children>
       <Label text="Manajemen Buku" />
       <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="600.0" spacing="10.0">
@@ -17,7 +21,7 @@
             <TextField fx:id="tfTitle" prefHeight="25.0" prefWidth="137.0" promptText="Judul Buku" />
             <TextField fx:id="tfAuthor" prefHeight="25.0" prefWidth="129.0" promptText="Penulis" />
             <TextField fx:id="tfYear" prefHeight="25.0" prefWidth="110.0" promptText="Tahun Terbit" />
-            <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#onAddOrUpdate" text="Tambah" />
+            <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#onAddOrUpdate" text="Tambah" styleClass="add-button" />
          </children>
       </HBox>
       <TableView fx:id="tableBooks" prefHeight="314.0" prefWidth="600.0">
@@ -25,13 +29,13 @@
           <TableColumn fx:id="colId" prefWidth="107.0" text="ID Buku" />
           <TableColumn fx:id="colTitle" prefWidth="223.0" text="Judul Buku" />
             <TableColumn fx:id="colAuthor" prefWidth="160.0" text="Penulis" />
-            <TableColumn fx:id="colYear" prefWidth="102.0" text="Tahun Terbit" />
+            <TableColumn fx:id="colYear" prefWidth="120.0" text="Tahun Terbit" />
         </columns>
       </TableView>
       <HBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="600.0" spacing="10.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#onEdit" text="Edit" />
-            <Button mnemonicParsing="false" onAction="#onDelete" text="Hapus" />
+            <Button mnemonicParsing="false" onAction="#onEdit" text="Edit" styleClass="edit-button" />
+            <Button mnemonicParsing="false" onAction="#onDelete" text="Hapus" styleClass="button-default" />
          </children>
       </HBox>
    </children>

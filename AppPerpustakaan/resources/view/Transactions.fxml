@@ -7,16 +7,19 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import java.lang.String?>
 
-
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="10.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uts.controllers.TransactionsController">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="620.0" spacing="10.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uts.controllers.TransactionsController">
+   <stylesheets>
+      <String fx:value="/css/style.css" />
+   </stylesheets>
    <children>
-      <Label text="Peminjaman Buku" />
+      <Label text="Peminjaman Buku"/>
       <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="600.0" spacing="10.0">
          <children>
             <ComboBox fx:id="cbMember" prefHeight="25.0" prefWidth="230.0" promptText="Pilih Anggota" />
             <ComboBox fx:id="cbBook" prefHeight="25.0" prefWidth="283.0" promptText="Pilih Buku" />
-            <Button mnemonicParsing="false" onAction="#onBorrow" text="Pinjam" />
+            <Button mnemonicParsing="false" onAction="#onBorrow" text="Pinjam" styleClass="add-button" />
          </children>
       </HBox>
       <TableView fx:id="tableTransactions" prefHeight="319.0" prefWidth="600.0">
